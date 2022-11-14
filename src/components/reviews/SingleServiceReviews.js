@@ -42,10 +42,11 @@ const SingleServiceReviews = ({ id }) => {
     justify-items-center"
       >
         {/* {<Loader></Loader>} */}
-        {reviewById &&
-          reviewById.map((x) => {
+        {(reviewById &&
+          reviewById?.map((x) => {
             return <ReviewCard review={x} key={x._id}></ReviewCard>;
-          })}
+          })) ||
+          ""}
       </div>
     </div>
   );

@@ -23,9 +23,9 @@ const MyReviews = () => {
   }, [reviews]);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8">
-      {myReviews.map((myReview) => (
+      {myReviews?.map((myReview) => (
         <ReviewCard review={myReview} key={myReview._id}></ReviewCard>
-      ))}
+      )) || ""}
       {setLoading(false)}
     </div>
   );

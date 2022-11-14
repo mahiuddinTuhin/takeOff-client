@@ -112,11 +112,11 @@ const AddReview = () => {
           onChange={(event) => setPlaceId(event?.target?.value)}
         >
           <option>Choose a place</option>
-          {services.map((service) => (
+          {services?.map((service) => (
             <option name={service.title} key={service._id} value={service._id}>
               {service.title}
             </option>
-          ))}
+          )) || ""}
         </select>
 
         {/* input section */}

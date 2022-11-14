@@ -29,7 +29,7 @@ const AllServices = () => {
     <div>
       <div className="flex items-center justify-center">
         <div>
-          {[...Array(totalPages).keys()].map((p) => (
+          {[...Array(totalPages).keys()]?.map((p) => (
             <button
               onClick={() => setCurrentPage(p)}
               type=""
@@ -38,7 +38,7 @@ const AllServices = () => {
             >
               {p + 1}
             </button>
-          ))}
+          )) || ""}
         </div>
         <select
           className="px-2 py-3 rounded bg-red-50 text-gray-900"
@@ -57,9 +57,9 @@ const AllServices = () => {
     <div>
       {pagination}
       <div className="grid grid-cols-1 lg:grid-cols-3">
-        {places.map((service) => (
+        {places?.map((service) => (
           <Service service={service} key={service._id}></Service>
-        ))}
+        )) || ""}
       </div>
       {pagination}
     </div>

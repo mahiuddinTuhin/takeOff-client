@@ -17,7 +17,7 @@ const ServicesNav = () => {
     <div>
       <div className="flex items-center -mx-4 space-x-2 overflow-x-auto overflow-y-hidden sm:justify-center flex-wrap dark:bg-gray-800 dark:text-gray-100 pb-4">
         {services
-          .map((service) => (
+          ?.map((service) => (
             <ServiceNav service={service} key={service._id}></ServiceNav>
           ))
           .slice(0, 6) || ""}
