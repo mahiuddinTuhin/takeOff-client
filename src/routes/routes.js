@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
         path: "/place/:id",
         element: <ServiceDetail />,
         loader: ({ params }) =>
-          fetch(`https://server-side-iota.vercel.app/places/${params.id}`),
+          fetch(`https://takeoff-server.vercel.app/places/${params.id}`),
       },
       {
         path: "/login",

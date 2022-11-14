@@ -14,7 +14,7 @@ const ReviewCard = ({ review }) => {
     if (confirm) {
       const id = review._id;
       try {
-        fetch(`https://server-side-iota.vercel.app/delete/${id}`, {
+        fetch(`https://takeoff-server.vercel.app/delete/${id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json; charset=UTF-8",

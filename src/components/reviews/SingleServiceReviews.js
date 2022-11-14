@@ -6,12 +6,14 @@ const SingleServiceReviews = ({ id }) => {
   const { reviews, setReviews, loading, setLoading } = useContext(MainContext);
   // const [reviews, setReviews] = useState([]);
   const [reviewById, setReviewsById] = useState([]);
-  const [sorting, setSorting] = useState(-1);
+  const [sorting, setSorting] = useState(1);
   useEffect(() => {
     try {
       // console.log("try inside");
       setLoading(true);
-      fetch(`https://server-side-iota.vercel.app/reviews/${id}?sorting=${sorting}`)
+      fetch(
+        `https://takeoff-server.vercel.app/reviews/${id}?sorting=${sorting}`
+      )
         .then((res) => res.json())
         .then((data) => setReviewsById(data));
     } catch {

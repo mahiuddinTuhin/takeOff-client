@@ -15,10 +15,12 @@ const AllServices = () => {
   useEffect(() => {
     // console.log(searchQuery);
     fetch(
-      `https://server-side-iota.vercel.app/places?page=${currentPage}&size=${perPage}&search=${searchQuery}`
+      `https://takeoff-server.vercel.app/places?page=${currentPage}&size=${perPage}&search=${searchQuery}`
     )
+      // https://takeoff-server.vercel.app/
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         setPlaces(data.result);
         setCount(data.count);
       });
@@ -29,7 +31,7 @@ const AllServices = () => {
     <div>
       <div className="flex items-center justify-center">
         <div>
-          {[...Array(totalPages).keys()]?.map((p) => (
+          {[...Array(totalPages)?.keys()]?.map((p) => (
             <button
               onClick={() => setCurrentPage(p)}
               type=""
