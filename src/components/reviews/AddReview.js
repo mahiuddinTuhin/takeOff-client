@@ -64,7 +64,7 @@ const AddReview = () => {
     // ReviewedPlace;
     // console.log(placeId);
     // current time
-    let currentDate = new Date().toJSON().slice(0, 10);
+    let currentDate = new Date()?.toJSON().slice(0, 10) || "";
     // console.log(currentDate);
     // finding place detail
     let newPlace;

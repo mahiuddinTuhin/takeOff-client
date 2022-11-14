@@ -20,7 +20,7 @@ const ServicesNav = () => {
           .map((service) => (
             <ServiceNav service={service} key={service._id}></ServiceNav>
           ))
-          .slice(0, 6)}
+          .slice(0, 6) || ""}
       </div>
     </div>
   );

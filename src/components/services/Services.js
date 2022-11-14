@@ -8,9 +8,11 @@ const Services = () => {
   return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-3">
-        {services.slice(0, 3).map((service) => (
-          <Service service={service} key={service._id}></Service>
-        ))}
+        {services
+          ?.slice(0, 3)
+          .map((service) => (
+            <Service service={service} key={service._id}></Service>
+          )) || ""}
       </div>
       <NavLink
         to="/places"

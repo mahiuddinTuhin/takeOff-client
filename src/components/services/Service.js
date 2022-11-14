@@ -38,7 +38,7 @@ const Service = ({ service }) => {
           </h1>
           {/* ::Card excerpt */}
           <p className="line-clamp-6 mb-3 overflow-hidden leading-relaxed text-gray-700 cursor-pointer select-none">
-            {description.slice(0, 100)}...
+            {description?.slice(0, 100) || ""}...
           </p>
           <h2 className="text-slate-800 font-bold">
             {" "}
