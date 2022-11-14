@@ -10,7 +10,7 @@ const MyReviews = () => {
   useEffect(() => {
     setLoading(true);
     try {
-      fetch(`http://localhost:5050/userreview/${user?.email}`, {
+      fetch(`https://server-side-iota.vercel.app/userreview/${user?.email}`, {
         headers: {
           authorization: `Bearer ${localStorage.getItem("genius-token")}`,
         },

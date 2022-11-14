@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
         path: "/place/:id",
         element: <ServiceDetail />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5050/places/${params.id}`),
+          fetch(`https://server-side-iota.vercel.app/places/${params.id}`),
       },
       {
         path: "/login",

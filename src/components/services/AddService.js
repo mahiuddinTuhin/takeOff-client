@@ -21,7 +21,7 @@ const AddService = () => {
       BasicClass,
     };
     const ratings = form.ratings.value;
-    fetch(`http://localhost:5050/addServices`, {
+    fetch(`https://server-side-iota.vercel.app/addServices`, {
       method: "POST",
       headers: {
         "content-type": "application/json; charset=UTF-8",

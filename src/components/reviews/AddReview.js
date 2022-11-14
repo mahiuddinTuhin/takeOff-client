@@ -30,7 +30,7 @@ const AddReview = () => {
     const date = reviewedPlace?.date;
 
     // const serviceImage = new
-    fetch(`http://localhost:5050/addreview`, {
+    fetch(`https://server-side-iota.vercel.app/addreview`, {
       method: "POST",
       body: JSON.stringify({
         name,

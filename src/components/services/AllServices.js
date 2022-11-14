@@ -15,7 +15,7 @@ const AllServices = () => {
   useEffect(() => {
     // console.log(searchQuery);
     fetch(
-      `http://localhost:5050/places?page=${currentPage}&size=${perPage}&search=${searchQuery}`
+      `https://server-side-iota.vercel.app/places?page=${currentPage}&size=${perPage}&search=${searchQuery}`
     )
       .then((res) => res.json())
       .then((data) => {

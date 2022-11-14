@@ -6,7 +6,7 @@ const ServicesNav = () => {
   const { services, setServices, placeCount, setPlaceCount } =
     useContext(MainContext);
   useEffect(() => {
-    fetch(`http://localhost:5050/places`)
+    fetch(`https://server-side-iota.vercel.app/places`)
       .then((res) => res.json())
       .then((data) => {
         setServices(data.result);

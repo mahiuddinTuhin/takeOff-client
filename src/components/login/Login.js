@@ -30,7 +30,7 @@ const Login = () => {
         };
         // console.log(currsentUser);
         // getting jwt token
-        fetch(`http://localhost:5050/jwt`, {
+        fetch(`https://server-side-iota.vercel.app/jwt`, {
           method: "POST",
           headers: {
             "content-type": "application/json",

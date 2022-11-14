@@ -11,7 +11,7 @@ const SingleServiceReviews = ({ id }) => {
     try {
       // console.log("try inside");
       setLoading(true);
-      fetch(`http://localhost:5050/reviews/${id}?sorting=${sorting}`)
+      fetch(`https://server-side-iota.vercel.app/reviews/${id}?sorting=${sorting}`)
         .then((res) => res.json())
         .then((data) => setReviewsById(data));
     } catch {
